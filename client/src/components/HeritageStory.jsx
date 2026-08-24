@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import BiharOutlineBackground from './BiharOutlineBackground';
+
 import bodhGaya from '../assets/heritage/bodh-gaya.jpg';
 import nalanda from '../assets/heritage/nalanda.jpg';
 import rajgir from '../assets/heritage/rajgir-vishwa-shanti-stupa.jpg';
@@ -118,12 +118,10 @@ function HeritageStory() {
     });
   };
 
-  const activeScene = scenes.find((scene) => scene.id === activeId) || scenes[0];
   const activeScale = 1 + scrollProgress * 0.07;
 
   return (
     <section className="heritage-section" aria-labelledby="heritage-title">
-      <BiharOutlineBackground />
       <div className="page-container heritage-content">
         <div className="heritage-intro">
           <div>
@@ -160,40 +158,23 @@ function HeritageStory() {
           </div>
 
           <div className="heritage-beats">
-            {scenes.map((scene, index) => (
-              <article
-                key={scene.id}
-                ref={(element) => { beatRefs.current[index] = element; }}
-                data-scene-id={scene.id}
-                className={`heritage-beat ${activeId === scene.id ? 'is-active' : ''}`}
-              >
-                <div className="heritage-beat-index">{scene.index}</div>
-                <div>
-                  <p className="heritage-beat-place">{scene.place}</p>
-                  <h3 className="heritage-beat-title display-face">{scene.title}</h3>
-                  <p className="heritage-beat-copy">{scene.description}</p>
-                </div>
-              </article>
-            ))}
-          </div>
+              {scenes.map((scene, index) => (
+                <article
+                  key={scene.id}
+                  ref={(element) => { beatRefs.current[index] = element; }}
+                  data-scene-id={scene.id}
+                  className={`heritage-beat ${activeId === scene.id ? 'is-active' : ''}`}
+                >
+                  <div className="heritage-beat-index">{scene.index}</div>
+                  <div>
+                    <p className="heritage-beat-place">{scene.place}</p>
+                    <h3 className="heritage-beat-title display-face">{scene.title}</h3>
+                    <p className="heritage-beat-copy">{scene.description}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
         </div>
-
-        <div className="heritage-current-label">
-          <span>Now viewing</span>
-          <strong>{activeScene.place}</strong>
-        </div>
-
-        <details className="heritage-credits">
-          <summary>Image sources and credits</summary>
-          <div className="heritage-credit-list">
-            <a href="https://commons.wikimedia.org/wiki/File:Mahabodhi_Temple,_Bodh_Gaya,_Bihar,_India.jpg" target="_blank" rel="noreferrer">Bodh Gaya · Shubhrojit Misra · CC BY-SA 4.0</a>
-            <a href="https://commons.wikimedia.org/wiki/File:Monastery_5_-_Nalanda_Mahavihara_(1).jpg" target="_blank" rel="noreferrer">Nalanda · Sumitsurai · CC BY-SA 4.0</a>
-            <a href="https://commons.wikimedia.org/wiki/File:Vishwa_shanti_stupa_at_Rajgir_Bihar.jpg" target="_blank" rel="noreferrer">Rajgir · Pratik10pathak · CC BY-SA 4.0</a>
-            <a href="https://commons.wikimedia.org/wiki/File:Golghar,_Patna,_Bihar.jpg" target="_blank" rel="noreferrer">Golghar · Kumartheharshit · CC BY-SA 3.0</a>
-            <a href="https://commons.wikimedia.org/wiki/File:WV_banner_Anga_Vikramshila_ruins.jpg" target="_blank" rel="noreferrer">Vikramshila · Saurav Sen Tonandada · CC0</a>
-            <a href="https://commons.wikimedia.org/wiki/File:Kesariya_Stupa_-kesariya-_east_champaran-_Bihar.jpg" target="_blank" rel="noreferrer">Kesariya · Monukr01 · CC BY-SA 4.0</a>
-          </div>
-        </details>
 
       </div>
     </section>

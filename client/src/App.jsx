@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import TripForm from './components/TripForm';
 import ItineraryTimeline from './components/ItineraryTimeline';
 import HeritageStory from './components/HeritageStory';
+import BiharOutlineBackground from './components/BiharOutlineBackground';
 import biharHero from './assets/bihar-hero.jpg';
 
 const API = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
@@ -26,6 +27,11 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    if (itinerary) {
+      document.getElementById('itinerary-result')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [itinerary]);
   return (
     <main className="app-shell">
       <div className="page-container">
@@ -45,6 +51,7 @@ function App() {
       <section id="top" className="hero-wrap" aria-labelledby="hero-title">
         <div className="page-container hero-grid">
           <div className="hero-copy">
+            <BiharOutlineBackground />
             <p className="eyebrow">Bihar itinerary studio</p>
             <h1 id="hero-title" className="hero-title display-face">
               Go beyond the <em>usual route.</em>
@@ -91,13 +98,19 @@ function App() {
         </div>
       </section>
 
+      {itinerary && (
+        <section id="itinerary-result" className="content-section" aria-labelledby="itinerary-heading">
+          <div className="page-container">
+            <ItineraryTimeline itinerary={itinerary} />
+          </div>
+        </section>
+      )}
+
       <HeritageStory />
 
       <section id="inspiration" className="content-section" aria-labelledby="inspiration-title">
         <div className="page-container">
-          {itinerary ? (
-            <ItineraryTimeline itinerary={itinerary} />
-          ) : (
+          {!itinerary && (
             <>
               <div className="section-heading">
                 <div>
