@@ -15,11 +15,11 @@ function TripForm({ onSubmit, loading }) {
     onSubmit(form);
   };
 
-  const fieldClass = 'h-12 w-full rounded-lg border border-slate-200 bg-white/80 backdrop-blur-sm px-4 text-base font-semibold text-slate-950 outline-none transition focus:border-amber-500 focus:ring-4 focus:ring-amber-100';
+  const fieldClass = 'h-12 w-full rounded-lg border border-slate-200 bg-white px-4 text-base font-semibold text-slate-950 outline-none transition focus:border-amber-500 focus:ring-4 focus:ring-amber-100';
   const labelClass = 'mb-2 block text-sm font-bold text-slate-800';
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-2xl rounded-2xl border border-white/20 bg-white/70 p-5 shadow-[0_30px_90px_rgba(0,0,0,0.22)] backdrop-blur-xl md:p-7">
+    <form onSubmit={handleSubmit} className="w-full max-w-2xl rounded-2xl border border-white/60 bg-white/85 p-5 shadow-2xl backdrop-blur-md md:p-7">
       <div className="mb-6 flex flex-col gap-2 border-b border-slate-100 pb-5 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="text-sm font-bold uppercase tracking-normal text-amber-700">Build your route</p>
