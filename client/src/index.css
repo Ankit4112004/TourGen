@@ -341,47 +341,6 @@ p {
   min-width: 0;
 }
 
-.form-section-label {
-  grid-column: 1 / -1;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 18px;
-  margin-bottom: -6px;
-  padding: 0 2px 10px;
-  border-bottom: 1px solid rgba(23, 51, 47, 0.09);
-}
-
-.form-section-label span:first-child {
-  color: var(--rust-dark);
-  font-size: 0.67rem;
-  font-weight: 700;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
-
-.form-section-label span:last-child {
-  color: var(--ink-faint);
-  font-size: 0.7rem;
-  font-weight: 600;
-}
-
-.form-field-date .form-control {
-  border-color: rgba(23, 51, 47, 0.14);
-  background: linear-gradient(135deg, rgba(229, 238, 232, 0.92), rgba(247, 243, 238, 0.88));
-  color-scheme: light;
-  font-variant-numeric: tabular-nums;
-}
-
-.form-field-date .form-control:hover {
-  border-color: rgba(191, 104, 78, 0.48);
-}
-
-.form-field-date .form-control:focus {
-  border-color: var(--rust);
-  background: var(--surface);
-}
-
 .form-label {
   display: block;
   margin-bottom: 8px;
@@ -1226,7 +1185,7 @@ p {
   grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
   gap: clamp(40px, 8vw, 112px);
   align-items: start;
-  padding-bottom: clamp(96px, 10vh, 140px);
+  padding-bottom: clamp(430px, 50vh, 560px);
 }
 
 .heritage-stage-wrap {
@@ -1442,7 +1401,7 @@ p {
 
   .heritage-layout {
     display: block;
-    padding-bottom: 72px;
+    padding-bottom: 220px;
   }
 
   .heritage-stage-wrap {
