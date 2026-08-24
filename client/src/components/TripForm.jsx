@@ -26,7 +26,12 @@ function TripForm({ onSubmit, loading }) {
       </div>
 
       <div className="trip-form-grid">
-        <div className="form-field">
+        <div className="form-section-label" aria-hidden="true">
+          <span>Plan the rhythm</span>
+          <span>Arrival to departure</span>
+        </div>
+
+        <div className="form-field form-field-date">
           <label className="form-label" htmlFor="start-date">Start date</label>
           <input
             id="start-date"
@@ -38,7 +43,7 @@ function TripForm({ onSubmit, loading }) {
           />
         </div>
 
-        <div className="form-field">
+        <div className="form-field form-field-date">
           <label className="form-label" htmlFor="end-date">End date</label>
           <input
             id="end-date"
