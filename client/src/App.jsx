@@ -37,10 +37,10 @@ function App() {
               Bihar itinerary studio
             </p>
             <h1 className="text-5xl font-black leading-[1.02] tracking-normal md:text-7xl">
-              BiharrChle
+              BiharChale
             </h1>
             <p className="mt-5 max-w-lg text-lg leading-8 text-white/85">
-              Ancient temples, ruins, and heritage towns arranged into a calm Bihar route.
+              Discover Bihar. Experience Bihar.
             </p>
             <div className="mt-8 grid max-w-md grid-cols-3 gap-3">
               <div className="border-l border-white/25 pl-4">

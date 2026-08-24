@@ -1,4 +1,4 @@
-# BiharrChle Deployment
+# BiharChale Deployment
 
 ## Frontend
 

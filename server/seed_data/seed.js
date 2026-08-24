@@ -1,5 +1,5 @@
 /**
- * Database seed script for BiharrChle
+ * Database seed script for BiharChale
  * 
  * Usage: npm run seed
  * 
