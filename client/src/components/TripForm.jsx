@@ -15,14 +15,14 @@ function TripForm({ onSubmit, loading }) {
     onSubmit(form);
   };
 
-  const fieldClass = 'h-12 w-full rounded-lg border border-slate-200 bg-white px-4 text-base font-semibold text-slate-950 outline-none transition focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100';
+  const fieldClass = 'h-12 w-full rounded-lg border border-slate-200 bg-white/80 backdrop-blur-sm px-4 text-base font-semibold text-slate-950 outline-none transition focus:border-amber-500 focus:ring-4 focus:ring-amber-100';
   const labelClass = 'mb-2 block text-sm font-bold text-slate-800';
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-2xl rounded-lg border border-white/45 bg-white/95 p-5 shadow-[0_30px_90px_rgba(0,0,0,0.22)] backdrop-blur md:p-7">
+    <form onSubmit={handleSubmit} className="w-full max-w-2xl rounded-2xl border border-white/20 bg-white/70 p-5 shadow-[0_30px_90px_rgba(0,0,0,0.22)] backdrop-blur-xl md:p-7">
       <div className="mb-6 flex flex-col gap-2 border-b border-slate-100 pb-5 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="text-sm font-bold uppercase tracking-normal text-emerald-700">Build your route</p>
+          <p className="text-sm font-bold uppercase tracking-normal text-amber-700">Build your route</p>
           <h2 className="mt-1 text-2xl font-black text-slate-950">Trip preferences</h2>
         </div>
         <p className="text-sm font-semibold text-slate-500">Bihar only</p>
@@ -97,7 +97,7 @@ function TripForm({ onSubmit, loading }) {
       <button
         type="submit"
         disabled={loading}
-        className="mt-6 h-[52px] w-full rounded-lg bg-[#007a5a] px-5 text-base font-black text-white shadow-[0_14px_30px_rgba(0,122,90,0.28)] transition hover:bg-[#00684d] disabled:cursor-not-allowed disabled:opacity-60"
+        className="mt-6 h-[52px] w-full rounded-lg bg-amber-600 px-5 text-base font-black text-white shadow-[0_14px_30px_rgba(217,119,6,0.28)] transition hover:bg-amber-700 hover:shadow-[0_14px_30px_rgba(217,119,6,0.4)] disabled:cursor-not-allowed disabled:opacity-60"
       >
         {loading ? 'Planning your trip...' : 'Plan My Trip'}
       </button>

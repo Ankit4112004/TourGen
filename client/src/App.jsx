@@ -2,7 +2,7 @@ import { useState } from 'react';
 import TripForm from './components/TripForm';
 import ItineraryTimeline from './components/ItineraryTimeline';
 import axios from 'axios';
-import keralaHero from './assets/kerala-hero.png';
+import biharHero from './assets/bihar-hero.jpg';
 
 const API = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
 
@@ -28,9 +28,9 @@ function App() {
     <main className="min-h-screen bg-[#f5f7f2] text-slate-950">
       <section
         className="relative min-h-[620px] overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: `url(${keralaHero})` }}
+        style={{ backgroundImage: `url(${biharHero})` }}
       >
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,20,16,0.88)_0%,rgba(3,20,16,0.66)_42%,rgba(3,20,16,0.2)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(25,15,10,0.95)_0%,rgba(25,15,10,0.7)_42%,rgba(25,15,10,0.1)_100%)]" />
         <div className="relative mx-auto grid min-h-[620px] max-w-7xl grid-cols-1 items-center gap-8 px-5 py-10 md:grid-cols-[0.9fr_1.1fr] md:px-8 lg:px-10">
           <header className="max-w-xl text-white">
             <p className="mb-4 w-fit rounded-full border border-white/25 bg-white/10 px-4 py-2 text-sm font-semibold backdrop-blur">
@@ -62,8 +62,8 @@ function App() {
             <TripForm onSubmit={handlePlan} loading={loading} />
 
             {loading && (
-              <div className="mt-4 flex items-center gap-3 rounded-lg border border-sky-200 bg-sky-50 px-4 py-3 text-sm font-semibold text-sky-900 shadow-sm">
-                <span className="h-4 w-4 rounded-full border-2 border-sky-700 border-t-transparent animate-spin" />
+              <div className="mt-4 flex items-center gap-3 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-semibold text-amber-900 shadow-sm backdrop-blur-md">
+                <span className="h-4 w-4 rounded-full border-2 border-amber-700 border-t-transparent animate-spin" />
                 Planning your perfect trip...
               </div>
             )}
@@ -82,18 +82,18 @@ function App() {
           {itinerary ? (
             <ItineraryTimeline itinerary={itinerary} />
           ) : (
-            <div className="grid gap-4 rounded-lg border border-emerald-100 bg-white/95 p-5 shadow-[0_24px_80px_rgba(15,23,42,0.12)] backdrop-blur md:grid-cols-3">
+            <div className="grid gap-4 rounded-xl border border-white/40 bg-white/60 p-5 shadow-[0_24px_80px_rgba(15,23,42,0.12)] backdrop-blur-xl md:grid-cols-3">
               <div>
-                <p className="text-sm font-bold uppercase tracking-normal text-emerald-800">Alleppey</p>
-                <p className="mt-2 text-sm leading-6 text-slate-600">Houseboats, village canals, sunset water, and slow mornings.</p>
+                <p className="text-sm font-bold uppercase tracking-normal text-amber-800">Bodh Gaya</p>
+                <p className="mt-2 text-sm leading-6 text-slate-700">Ancient temples, the Bodhi tree, peace, and spiritual calm.</p>
               </div>
               <div>
-                <p className="text-sm font-bold uppercase tracking-normal text-emerald-800">Munnar</p>
-                <p className="mt-2 text-sm leading-6 text-slate-600">Tea estates, cool air, plantation walks, and hill viewpoints.</p>
+                <p className="text-sm font-bold uppercase tracking-normal text-amber-800">Rajgir</p>
+                <p className="mt-2 text-sm leading-6 text-slate-700">Lush hills, hot springs, glass bridge, and deep history.</p>
               </div>
               <div>
-                <p className="text-sm font-bold uppercase tracking-normal text-emerald-800">Fort Kochi</p>
-                <p className="mt-2 text-sm leading-6 text-slate-600">Harbor streets, Kathakali evenings, cafes, galleries, and spice markets.</p>
+                <p className="text-sm font-bold uppercase tracking-normal text-amber-800">Patna</p>
+                <p className="mt-2 text-sm leading-6 text-slate-700">Rich heritage, grand museums, and the banks of the Ganges.</p>
               </div>
             </div>
           )}
