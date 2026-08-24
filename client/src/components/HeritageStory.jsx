@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import BiharHeritageMap from './BiharHeritageMap';
 import BiharOutlineBackground from './BiharOutlineBackground';
 import bodhGaya from '../assets/heritage/bodh-gaya.jpg';
 import nalanda from '../assets/heritage/nalanda.jpg';
@@ -196,7 +195,6 @@ function HeritageStory() {
           </div>
         </details>
 
-        <BiharHeritageMap activeId={activeId} onSelect={selectScene} />
       </div>
     </section>
   );
