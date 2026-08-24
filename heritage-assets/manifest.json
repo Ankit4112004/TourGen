@@ -1,0 +1,98 @@
+[
+  {
+    "slug": "bodh-gaya",
+    "site": "Mahabodhi Temple Bodh Gaya Bihar",
+    "title": "File:Mahabodhi Temple, Bodh Gaya, Bihar, India.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File%3AMahabodhi_Temple%2C_Bodh_Gaya%2C_Bihar%2C_India.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Mahabodhi_Temple%2C_Bodh_Gaya%2C_Bihar%2C_India.jpg/1920px-Mahabodhi_Temple%2C_Bodh_Gaya%2C_Bihar%2C_India.jpg",
+    "author": "Shubhrojit Misra",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "The Mahabodhi Temple is a UNESCO World Heritage Site situated at Bodh Gaya in the state of Bihar, India. It is one of the four holy sites related to the life of the Lord Buddha, and particularly to the attainment of enlightenment. The first temple was built by Emperor Ashoka in the 3rd century B.C., and the present temple dates from the 5th or 6th centuries.",
+    "local_path": "client/src/assets/heritage/bodh-gaya.jpg",
+    "dimensions": {
+      "width": 1600,
+      "height": 898
+    }
+  },
+  {
+    "slug": "nalanda",
+    "site": "Nalanda Mahavihara ruins Bihar",
+    "title": "File:Monastery 5 - Nalanda Mahavihara (1).jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File%3AMonastery_5_-_Nalanda_Mahavihara_%281%29.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Monastery_5_-_Nalanda_Mahavihara_%281%29.jpg/1920px-Monastery_5_-_Nalanda_Mahavihara_%281%29.jpg",
+    "author": "Sumitsurai",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "Monastery 5 - Ruins of the ancient Nalanda University",
+    "local_path": "client/src/assets/heritage/nalanda.jpg",
+    "dimensions": {
+      "width": 1600,
+      "height": 1089
+    }
+  },
+  {
+    "slug": "rajgir",
+    "site": "Rajgir Bihar heritage",
+    "title": "File:Battle Ground of Jarasandh, Rajgir, Bihar 03.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File%3ABattle_Ground_of_Jarasandh%2C_Rajgir%2C_Bihar_03.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Battle_Ground_of_Jarasandh%2C_Rajgir%2C_Bihar_03.jpg/1920px-Battle_Ground_of_Jarasandh%2C_Rajgir%2C_Bihar_03.jpg",
+    "author": "Paramanu Sarkar",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "Battle Ground of Jarasandh, Rajgir, Bihar 01",
+    "local_path": "client/src/assets/heritage/rajgir.jpg",
+    "dimensions": {
+      "width": 1600,
+      "height": 900
+    }
+  },
+  {
+    "slug": "golghar",
+    "site": "Golghar Patna Bihar",
+    "title": "File:Golghar, Patna, Bihar.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File%3AGolghar%2C_Patna%2C_Bihar.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Golghar%2C_Patna%2C_Bihar.jpg/1920px-Golghar%2C_Patna%2C_Bihar.jpg",
+    "author": "Kumartheharshit",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "description": "This is a photo of ASI monument number",
+    "local_path": "client/src/assets/heritage/golghar.jpg",
+    "dimensions": {
+      "width": 1600,
+      "height": 1000
+    }
+  },
+  {
+    "slug": "vikramshila",
+    "site": "Vikramshila ruins Bihar",
+    "title": "File:WV banner Anga Vikramshila ruins.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File%3AWV_banner_Anga_Vikramshila_ruins.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/WV_banner_Anga_Vikramshila_ruins.jpg/1920px-WV_banner_Anga_Vikramshila_ruins.jpg",
+    "author": "Saurav Sen Tonandada",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "description": "Wikivoyage banner for Anga. Cropped from this PD-licensed picture:https://commons.wikimedia.org/wiki/File%3AVikramshila_Entrance.jpg",
+    "local_path": "client/src/assets/heritage/vikramshila.jpg",
+    "dimensions": {
+      "width": 1600,
+      "height": 228
+    }
+  },
+  {
+    "slug": "kesariya",
+    "site": "Kesariya Stupa Bihar",
+    "title": "File:Kesariya Stupa -kesariya- east champaran- Bihar.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File%3AKesariya_Stupa_-kesariya-_east_champaran-_Bihar.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Kesariya_Stupa_-kesariya-_east_champaran-_Bihar.jpg",
+    "author": "Monukr01",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "This Stupa dedicated to Lord Buddha has great significance and it is believed to date back to somewhere between 200 AD and 750 AD.\nIt is believed to have been built to honor the site where Lord Buddha must have spent the last days of his journey while preparing to attain Nirvana.",
+    "local_path": "client/src/assets/heritage/kesariya.jpg",
+    "dimensions": {
+      "width": 1040,
+      "height": 681
+    }
+  }
+]
