@@ -18,10 +18,10 @@ const ActivityOutputSchema = z.object({
 });
 
 async function activityAgent(tripInput, retrievedActivities, numDays) {
-  const prompt = `You are a Kerala travel expert specializing in activities and experiences.
+  const prompt = `You are a Bihar travel expert specializing in activities and experiences.
 
 TRIP REQUIREMENTS:
-- Region: Kerala
+- Region: Bihar
 - Dates: ${tripInput.start_date} to ${tripInput.end_date} (${numDays} days)
 - Vibe: ${tripInput.vibe}
 - Budget per person for activities: Rs.${tripInput.activity_budget}

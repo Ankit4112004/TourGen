@@ -177,7 +177,7 @@ async function finalItineraryNode(state) {
           duration: a.duration_hours,
           price: a.price_per_person,
           distance_from_base_km: distance,
-          map_url: mapsSearchUrl(`${a.activity_name} ${location} Kerala`),
+          map_url: mapsSearchUrl(`${a.activity_name} ${location} Bihar`),
           reasoning: a.reasoning
         };
       }),
@@ -189,10 +189,10 @@ async function finalItineraryNode(state) {
   
   return {
     final_itinerary: {
-      trip_summary: `${numDays}-day ${state.trip_input.vibe} trip to Kerala`,
+      trip_summary: `${numDays}-day ${state.trip_input.vibe} trip to Bihar`,
       base_stay: {
         ...stay,
-        map_url: mapsSearchUrl(`${stay.stay_name} ${stay.stay_city} Kerala`)
+        map_url: mapsSearchUrl(`${stay.stay_name} ${stay.stay_city} Bihar`)
       },
       daily_breakdown: dailyBreakdown,
       nights,

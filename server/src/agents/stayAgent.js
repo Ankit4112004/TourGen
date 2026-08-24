@@ -14,10 +14,10 @@ const StayOutputSchema = z.object({
 });
 
 async function stayAgent(tripInput, retrievedStays) {
-  const prompt = `You are a Kerala travel expert specializing in accommodation.
+  const prompt = `You are a Bihar travel expert specializing in accommodation.
 
 TRIP REQUIREMENTS:
-- Region: Kerala
+- Region: Bihar
 - Dates: ${tripInput.start_date} to ${tripInput.end_date} (${tripInput.num_days} days)
 - Budget per night: Rs.${tripInput.budget_per_night}
 - Vibe: ${tripInput.vibe}
@@ -35,7 +35,7 @@ Best for: ${[].concat(s.best_for || []).join(', ')}
 TASK: Select the SINGLE best stay for this trip. Consider:
 1. Vibe alignment with trip requirements
 2. Budget fit
-3. Location as a base for exploring Kerala
+3. Location as a base for exploring Bihar
 4. Amenities that match traveler type
 
 Return JSON with: selected_stay_id (number), stay_name (string), stay_city (string), stay_latitude (number), stay_longitude (number), price_per_night (number), reasoning (string), why_this_fits (string)`;

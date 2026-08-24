@@ -1,5 +1,5 @@
 /**
- * Database seed script for GoKerala
+ * Database seed script for BiharrChle
  * 
  * Usage: npm run seed
  * 

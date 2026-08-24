@@ -25,7 +25,7 @@ function TripForm({ onSubmit, loading }) {
           <p className="text-sm font-bold uppercase tracking-normal text-emerald-700">Build your route</p>
           <h2 className="mt-1 text-2xl font-black text-slate-950">Trip preferences</h2>
         </div>
-        <p className="text-sm font-semibold text-slate-500">Kerala only</p>
+        <p className="text-sm font-semibold text-slate-500">Bihar only</p>
       </div>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">

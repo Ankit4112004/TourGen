@@ -28,7 +28,7 @@ function stayToDto(stay) {
     stay_city: stay.city,
     stay_latitude: stay.latitude,
     stay_longitude: stay.longitude,
-    map_url: mapsSearchUrl(`${stay.name} ${stay.city} Kerala`),
+    map_url: mapsSearchUrl(`${stay.name} ${stay.city} Bihar`),
     price_per_night: stay.price_per_night_inr,
     reasoning: `${stay.name} keeps this part of the route based in ${stay.city}.`,
     why_this_fits: `${stay.type} with ${(stay.amenities || []).slice(0, 3).join(', ')}.`,
@@ -154,7 +154,7 @@ function normalizeActivity(activity, stay, index, tripInput) {
     price: activity.price_per_person_inr || 0,
     distance_from_stay_km: Math.round(haversineDistance(stay.latitude, stay.longitude, latitude, longitude)),
     distance_from_base_km: Math.round(haversineDistance(stay.latitude, stay.longitude, latitude, longitude)),
-    map_url: mapsSearchUrl(`${activity.name} ${location} Kerala`),
+    map_url: mapsSearchUrl(`${activity.name} ${location} Bihar`),
     reasoning: includesTag(activity, tripInput.vibe)
       ? `Matches your ${tripInput.vibe} trip style.`
       : 'Adds variety while staying close to this base.',
@@ -218,7 +218,7 @@ function stayForDay(stayPlan, day) {
   return (stayPlan.find((segment) => day >= segment.startDay && day <= segment.endDay) || stayPlan[stayPlan.length - 1]).stay;
 }
 
-function buildLocalItinerary(tripInput, reason = 'Generated as a multi-place Kerala route') {
+function buildLocalItinerary(tripInput, reason = 'Generated as a multi-place Bihar route') {
   const selectedActivities = selectActivities(tripInput);
   const dayBuckets = groupActivitiesIntoDays(selectedActivities, tripInput.num_days);
   const nights = Math.max(0, tripInput.num_days - 1);
@@ -268,7 +268,7 @@ function buildLocalItinerary(tripInput, reason = 'Generated as a multi-place Ker
   const plannedAccommodationCost = dailyBreakdown.slice(0, nights).reduce((sum, day) => sum + day.stay.price_per_night, 0);
 
   return {
-    trip_summary: `${tripInput.num_days}-day ${tripInput.vibe} multi-place Kerala route`,
+    trip_summary: `${tripInput.num_days}-day ${tripInput.vibe} multi-place Bihar route`,
     base_stay: baseStay,
     stay_segments: staySegments,
     daily_breakdown: dailyBreakdown,

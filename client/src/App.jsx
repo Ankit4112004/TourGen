@@ -34,13 +34,13 @@ function App() {
         <div className="relative mx-auto grid min-h-[620px] max-w-7xl grid-cols-1 items-center gap-8 px-5 py-10 md:grid-cols-[0.9fr_1.1fr] md:px-8 lg:px-10">
           <header className="max-w-xl text-white">
             <p className="mb-4 w-fit rounded-full border border-white/25 bg-white/10 px-4 py-2 text-sm font-semibold backdrop-blur">
-              Kerala itinerary studio
+              Bihar itinerary studio
             </p>
             <h1 className="text-5xl font-black leading-[1.02] tracking-normal md:text-7xl">
-              GoKerala
+              BiharrChle
             </h1>
             <p className="mt-5 max-w-lg text-lg leading-8 text-white/85">
-              Backwaters, tea hills, beaches, spice forests, and heritage towns arranged into a calm Kerala route.
+              Ancient temples, ruins, and heritage towns arranged into a calm Bihar route.
             </p>
             <div className="mt-8 grid max-w-md grid-cols-3 gap-3">
               <div className="border-l border-white/25 pl-4">

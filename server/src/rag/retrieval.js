@@ -8,7 +8,7 @@ async function getEmbedding(text) {
 }
 
 async function retrieveStays(vibe, budget_per_night, limit = 5) {
-  const searchText = `${vibe} stay in Kerala. Comfortable, scenic, good value.`;
+  const searchText = `${vibe} stay in Bihar. Comfortable, scenic, good value.`;
   const embedding = await getEmbedding(searchText);
 
   const query = `
@@ -23,7 +23,7 @@ async function retrieveStays(vibe, budget_per_night, limit = 5) {
 }
 
 async function retrieveActivities(vibe, city_filter, limit = 10) {
-  const searchText = `${vibe} activities in Kerala. Outdoor, cultural, memorable experiences.`;
+  const searchText = `${vibe} activities in Bihar. Outdoor, cultural, memorable experiences.`;
   const embedding = await getEmbedding(searchText);
 
   let query = `SELECT id, name, location, city, latitude, longitude, price_per_person_inr,
