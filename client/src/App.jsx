@@ -12,6 +12,25 @@ function App() {
   const [itinerary, setItinerary] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [theme, setTheme] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        return savedTheme;
+      }
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    return 'light';
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'light' ? 'dark' : 'light');
+  };
 
   const handlePlan = async (formData) => {
     setLoading(true);
@@ -43,6 +62,14 @@ function App() {
           <div className="topbar-nav">
             <a href="#inspiration">Explore Bihar</a>
             <a href="#planner">Build a route</a>
+            <button
+              onClick={toggleTheme}
+              className="theme-toggle"
+              aria-label="Toggle dark mode"
+              title="Toggle dark mode"
+            >
+              {theme === 'light' ? '🌙' : '☀️'}
+            </button>
           </div>
           <span className="topbar-note">A quieter way to travel</span>
         </nav>
