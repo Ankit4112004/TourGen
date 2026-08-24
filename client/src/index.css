@@ -77,7 +77,6 @@ p {
 
 .app-shell {
   min-height: 100vh;
-  overflow: hidden;
 }
 
 .page-container {
@@ -1659,7 +1658,7 @@ p {
 .heritage-section {
   position: relative;
   isolation: isolate;
-  overflow: hidden;
+  overflow: clip;
 }
 
 .heritage-content {
