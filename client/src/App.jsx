@@ -1,7 +1,7 @@
 import { useState } from 'react';
+import axios from 'axios';
 import TripForm from './components/TripForm';
 import ItineraryTimeline from './components/ItineraryTimeline';
-import axios from 'axios';
 import biharHero from './assets/bihar-hero.jpg';
 
 const API = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
@@ -14,6 +14,7 @@ function App() {
   const handlePlan = async (formData) => {
     setLoading(true);
     setError('');
+
     try {
       const res = await axios.post(`${API}/plan-trip`, formData);
       setItinerary(res.data);
@@ -25,51 +26,63 @@ function App() {
   };
 
   return (
-    <main className="min-h-screen bg-[#f5f7f2] text-slate-950">
-      <section
-        className="relative min-h-[620px] overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: `url(${biharHero})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1a110b] via-[#1a110b]/60 to-transparent" />
-        <div className="relative mx-auto grid min-h-[620px] max-w-7xl grid-cols-1 items-center gap-8 px-5 py-10 md:grid-cols-[0.9fr_1.1fr] md:px-8 lg:px-10">
-          <header className="max-w-xl text-white">
-            <p className="mb-4 w-fit rounded-full border border-white/25 bg-white/10 px-4 py-2 text-sm font-semibold backdrop-blur">
-              Bihar itinerary studio
-            </p>
-            <h1 className="text-5xl font-black leading-[1.02] tracking-normal md:text-7xl">
-              BiharChale
+    <main className="app-shell">
+      <div className="page-container">
+        <nav className="topbar" aria-label="Primary navigation">
+          <a className="brand" href="#top" aria-label="BiharChale home">
+            <span className="brand-mark" aria-hidden="true">B</span>
+            <span>BiharChale</span>
+          </a>
+          <div className="topbar-nav">
+            <a href="#inspiration">Explore Bihar</a>
+            <a href="#planner">Build a route</a>
+          </div>
+          <span className="topbar-note">A quieter way to travel</span>
+        </nav>
+      </div>
+
+      <section id="top" className="hero-wrap" aria-labelledby="hero-title">
+        <div className="page-container hero-grid">
+          <div className="hero-copy">
+            <p className="eyebrow">Bihar itinerary studio</p>
+            <h1 id="hero-title" className="hero-title display-face">
+              Go beyond the <em>usual route.</em>
             </h1>
-            <p className="mt-5 max-w-lg text-lg leading-8 text-white/85">
-              Discover Bihar. Experience Bihar.
+            <p className="hero-description">
+              Thoughtful Bihar itineraries, shaped around your pace, budget, and the places you want to remember.
             </p>
-            <div className="mt-8 grid max-w-md grid-cols-3 gap-3">
-              <div className="border-l border-white/25 pl-4">
-                <p className="text-2xl font-black">15+</p>
-                <p className="mt-1 text-xs font-semibold uppercase text-white/65">stays</p>
+
+            <div className="hero-meta" aria-label="BiharChale highlights">
+              <div className="meta-item">
+                <p className="meta-value">15+</p>
+                <p className="meta-label">Curated stays</p>
               </div>
-              <div className="border-l border-white/25 pl-4">
-                <p className="text-2xl font-black">25+</p>
-                <p className="mt-1 text-xs font-semibold uppercase text-white/65">activities</p>
+              <div className="meta-item">
+                <p className="meta-value">25+</p>
+                <p className="meta-label">Local experiences</p>
               </div>
-              <div className="border-l border-white/25 pl-4">
-                <p className="text-2xl font-black">1</p>
-                <p className="mt-1 text-xs font-semibold uppercase text-white/65">clear plan</p>
+              <div className="meta-item">
+                <p className="meta-value">1</p>
+                <p className="meta-label">Clear plan</p>
               </div>
             </div>
-          </header>
+          </div>
 
-          <div className="md:justify-self-end">
+          <div id="planner" className="planner-column">
+            <div className="hero-image" aria-hidden="true">
+              <img src={biharHero} alt="Mahabodhi Temple at sunset" />
+            </div>
             <TripForm onSubmit={handlePlan} loading={loading} />
 
             {loading && (
-              <div className="mt-4 flex items-center gap-3 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-semibold text-amber-900 shadow-sm backdrop-blur-md">
-                <span className="h-4 w-4 rounded-full border-2 border-amber-700 border-t-transparent animate-spin" />
+              <div className="status-message loading" role="status">
+                <span className="status-spinner" aria-hidden="true" />
                 Planning your perfect trip...
               </div>
             )}
 
             {error && (
-              <div className="mt-4 rounded-lg border border-rose-200 bg-rose-50 px-4 py-3 text-sm font-semibold text-rose-800 shadow-sm">
+              <div className="status-message error" role="alert">
                 {error}
               </div>
             )}
@@ -77,28 +90,50 @@ function App() {
         </div>
       </section>
 
-      <section className="relative -mt-14 px-5 pb-16 md:px-8 lg:px-10">
-        <div className="mx-auto max-w-7xl">
+      <section id="inspiration" className="content-section" aria-labelledby="inspiration-title">
+        <div className="page-container">
           {itinerary ? (
             <ItineraryTimeline itinerary={itinerary} />
           ) : (
-            <div className="grid gap-4 md:grid-cols-3">
-              <div className="rounded-xl border border-white/40 bg-white/70 p-6 shadow-xl backdrop-blur-md">
-                <p className="text-sm font-bold uppercase tracking-normal text-amber-800">Bodh Gaya</p>
-                <p className="mt-2 text-sm leading-6 text-slate-800 font-medium">Ancient temples, the Bodhi tree, peace, and spiritual calm.</p>
+            <>
+              <div className="section-heading">
+                <div>
+                  <p className="section-eyebrow">Start with a feeling</p>
+                  <h2 id="inspiration-title" className="section-title display-face">Three places to begin.</h2>
+                </div>
+                <p className="section-caption">
+                  A little inspiration before you choose your dates. Every route is built to leave room for the unexpected.
+                </p>
               </div>
-              <div className="rounded-xl border border-white/40 bg-white/70 p-6 shadow-xl backdrop-blur-md">
-                <p className="text-sm font-bold uppercase tracking-normal text-amber-800">Rajgir</p>
-                <p className="mt-2 text-sm leading-6 text-slate-800 font-medium">Lush hills, hot springs, glass bridge, and deep history.</p>
+
+              <div className="inspiration-grid">
+                <article className="inspiration-card">
+                  <p className="inspiration-number">01</p>
+                  <h3 className="inspiration-title">Bodh Gaya</h3>
+                  <p className="inspiration-copy">Ancient temples, the Bodhi tree, and space for a slower kind of morning.</p>
+                </article>
+                <article className="inspiration-card">
+                  <p className="inspiration-number">02</p>
+                  <h3 className="inspiration-title">Rajgir</h3>
+                  <p className="inspiration-copy">Lush hills, hot springs, the glass bridge, and deep history in every turn.</p>
+                </article>
+                <article className="inspiration-card">
+                  <p className="inspiration-number">03</p>
+                  <h3 className="inspiration-title">Patna</h3>
+                  <p className="inspiration-copy">Rich heritage, thoughtful museums, and evenings beside the Ganges.</p>
+                </article>
               </div>
-              <div className="rounded-xl border border-white/40 bg-white/70 p-6 shadow-xl backdrop-blur-md">
-                <p className="text-sm font-bold uppercase tracking-normal text-amber-800">Patna</p>
-                <p className="mt-2 text-sm leading-6 text-slate-800 font-medium">Rich heritage, grand museums, and the banks of the Ganges.</p>
-              </div>
-            </div>
+            </>
           )}
         </div>
       </section>
+
+      <footer className="footer">
+        <div className="page-container footer-inner">
+          <span><strong>BiharChale</strong> · Discover Bihar at your own pace.</span>
+          <span>Made for meaningful journeys.</span>
+        </div>
+      </footer>
     </main>
   );
 }
