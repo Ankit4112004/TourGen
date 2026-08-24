@@ -3,7 +3,6 @@ import axios from 'axios';
 import TripForm from './components/TripForm';
 import ItineraryTimeline from './components/ItineraryTimeline';
 import HeritageStory from './components/HeritageStory';
-import HeritageReel from './components/HeritageReel';
 import biharHero from './assets/bihar-hero.jpg';
 
 const API = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
@@ -93,7 +92,6 @@ function App() {
       </section>
 
       <HeritageStory />
-      <HeritageReel />
 
       <section id="inspiration" className="content-section" aria-labelledby="inspiration-title">
         <div className="page-container">

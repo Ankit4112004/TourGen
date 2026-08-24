@@ -34,17 +34,17 @@
   {
     "slug": "rajgir",
     "site": "Rajgir Bihar heritage",
-    "title": "File:Battle Ground of Jarasandh, Rajgir, Bihar 03.jpg",
-    "source_page": "https://commons.wikimedia.org/wiki/File%3ABattle_Ground_of_Jarasandh%2C_Rajgir%2C_Bihar_03.jpg",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Battle_Ground_of_Jarasandh%2C_Rajgir%2C_Bihar_03.jpg/1920px-Battle_Ground_of_Jarasandh%2C_Rajgir%2C_Bihar_03.jpg",
-    "author": "Paramanu Sarkar",
+    "title": "File:Vishwa shanti stupa at Rajgir Bihar.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File%3AVishwa_shanti_stupa_at_Rajgir_Bihar.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Vishwa_shanti_stupa_at_Rajgir_Bihar.jpg/1920px-Vishwa_shanti_stupa_at_Rajgir_Bihar.jpg",
+    "author": "Pratik10pathak",
     "license": "CC BY-SA 4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-    "description": "Battle Ground of Jarasandh, Rajgir, Bihar 01",
-    "local_path": "client/src/assets/heritage/rajgir.jpg",
+    "description": "Vishwa Shanti Stupa at Rajgir, Bihar",
+    "local_path": "client/src/assets/heritage/rajgir-vishwa-shanti-stupa.jpg",
     "dimensions": {
-      "width": 1600,
-      "height": 900
+      "width": 1280,
+      "height": 720
     }
   },
   {

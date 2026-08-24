@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import BiharOutlineBackground from './BiharOutlineBackground';
 import bodhGaya from '../assets/heritage/bodh-gaya.jpg';
 import nalanda from '../assets/heritage/nalanda.jpg';
-import rajgir from '../assets/heritage/rajgir.jpg';
+import rajgir from '../assets/heritage/rajgir-vishwa-shanti-stupa.jpg';
 import golghar from '../assets/heritage/golghar.jpg';
 import kesariya from '../assets/heritage/kesariya.jpg';
 
@@ -32,7 +32,7 @@ const scenes = [
     title: 'Let the hills change the pace.',
     description: 'Ancient paths, warm springs, and green hills turn a day in Rajgir into an unhurried detour.',
     image: rajgir,
-    alt: 'The historic Jarasandh site surrounded by the hills of Rajgir',
+    alt: 'Vishwa Shanti Stupa on the hills of Rajgir, Bihar',
   },
   {
     id: 'golghar',
@@ -188,7 +188,7 @@ function HeritageStory() {
           <div className="heritage-credit-list">
             <a href="https://commons.wikimedia.org/wiki/File:Mahabodhi_Temple,_Bodh_Gaya,_Bihar,_India.jpg" target="_blank" rel="noreferrer">Bodh Gaya · Shubhrojit Misra · CC BY-SA 4.0</a>
             <a href="https://commons.wikimedia.org/wiki/File:Monastery_5_-_Nalanda_Mahavihara_(1).jpg" target="_blank" rel="noreferrer">Nalanda · Sumitsurai · CC BY-SA 4.0</a>
-            <a href="https://commons.wikimedia.org/wiki/File:Battle_Ground_of_Jarasandh,_Rajgir,_Bihar_03.jpg" target="_blank" rel="noreferrer">Rajgir · Paramanu Sarkar · CC BY-SA 4.0</a>
+            <a href="https://commons.wikimedia.org/wiki/File:Vishwa_shanti_stupa_at_Rajgir_Bihar.jpg" target="_blank" rel="noreferrer">Rajgir · Pratik10pathak · CC BY-SA 4.0</a>
             <a href="https://commons.wikimedia.org/wiki/File:Golghar,_Patna,_Bihar.jpg" target="_blank" rel="noreferrer">Golghar · Kumartheharshit · CC BY-SA 3.0</a>
             <a href="https://commons.wikimedia.org/wiki/File:WV_banner_Anga_Vikramshila_ruins.jpg" target="_blank" rel="noreferrer">Vikramshila · Saurav Sen Tonandada · CC0</a>
             <a href="https://commons.wikimedia.org/wiki/File:Kesariya_Stupa_-kesariya-_east_champaran-_Bihar.jpg" target="_blank" rel="noreferrer">Kesariya · Monukr01 · CC BY-SA 4.0</a>
