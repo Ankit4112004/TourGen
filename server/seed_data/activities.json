@@ -7,7 +7,11 @@
     "longitude": 84.991,
     "price_per_person_inr": 0,
     "duration_hours": 2,
-    "vibe_tags": ["spiritual", "history", "peaceful"],
+    "vibe_tags": [
+      "spiritual",
+      "history",
+      "peaceful"
+    ],
     "type": "Sightseeing",
     "best_time": "Early Morning or Evening",
     "description": "Visit the UNESCO World Heritage site where Lord Buddha attained enlightenment under the Bodhi Tree."
@@ -20,7 +24,11 @@
     "longitude": 85.444,
     "price_per_person_inr": 150,
     "duration_hours": 3,
-    "vibe_tags": ["history", "educational", "architecture"],
+    "vibe_tags": [
+      "history",
+      "educational",
+      "architecture"
+    ],
     "type": "Heritage Tour",
     "best_time": "Morning",
     "description": "Explore the expansive red-brick ruins of one of the world's oldest residential universities."
@@ -30,10 +38,14 @@
     "location": "Patna",
     "city": "Patna",
     "latitude": 25.609,
-    "longitude": 85.120,
+    "longitude": 85.12,
     "price_per_person_inr": 100,
     "duration_hours": 2.5,
-    "vibe_tags": ["culture", "history", "indoor"],
+    "vibe_tags": [
+      "culture",
+      "history",
+      "indoor"
+    ],
     "type": "Museum",
     "best_time": "Afternoon",
     "description": "A modern, world-class museum showcasing the rich history and artifacts of ancient Bihar."
@@ -46,7 +58,11 @@
     "longitude": 85.426,
     "price_per_person_inr": 120,
     "duration_hours": 2,
-    "vibe_tags": ["scenic", "spiritual", "adventure"],
+    "vibe_tags": [
+      "scenic",
+      "spiritual",
+      "adventure"
+    ],
     "type": "Sightseeing",
     "best_time": "Morning or Late Afternoon",
     "description": "Take a scenic ropeway ride up the Ratnagiri hill to visit the beautiful white Peace Pagoda."
@@ -55,11 +71,15 @@
     "name": "Golghar Climb & Park",
     "location": "Patna",
     "city": "Patna",
-    "latitude": 25.620,
+    "latitude": 25.62,
     "longitude": 85.137,
     "price_per_person_inr": 50,
     "duration_hours": 1,
-    "vibe_tags": ["architecture", "scenic", "history"],
+    "vibe_tags": [
+      "architecture",
+      "scenic",
+      "history"
+    ],
     "type": "Sightseeing",
     "best_time": "Evening",
     "description": "Climb the spiral staircase of this massive 18th-century granary for a panoramic view of the Ganges and Patna city."
@@ -69,10 +89,14 @@
     "location": "Gandhi Ghat",
     "city": "Patna",
     "latitude": 25.624,
-    "longitude": 85.170,
+    "longitude": 85.17,
     "price_per_person_inr": 300,
     "duration_hours": 1.5,
-    "vibe_tags": ["relaxing", "nature", "scenic"],
+    "vibe_tags": [
+      "relaxing",
+      "nature",
+      "scenic"
+    ],
     "type": "Activity",
     "best_time": "Sunset",
     "description": "Enjoy a peaceful boat ride on the holy river Ganges, especially beautiful during the evening Aarti."
@@ -85,7 +109,11 @@
     "longitude": 85.435,
     "price_per_person_inr": 250,
     "duration_hours": 2,
-    "vibe_tags": ["adventure", "nature", "photography"],
+    "vibe_tags": [
+      "adventure",
+      "nature",
+      "photography"
+    ],
     "type": "Adventure",
     "best_time": "Morning",
     "description": "Walk across the thrilling transparent glass bridge suspended over the lush Rajgir gorge."
@@ -98,7 +126,11 @@
     "longitude": 84.016,
     "price_per_person_inr": 25,
     "duration_hours": 1.5,
-    "vibe_tags": ["architecture", "history", "photography"],
+    "vibe_tags": [
+      "architecture",
+      "history",
+      "photography"
+    ],
     "type": "Heritage Tour",
     "best_time": "Afternoon",
     "description": "Visit the magnificent red sandstone mausoleum built in the middle of an artificial lake."
@@ -111,7 +143,11 @@
     "longitude": 85.583,
     "price_per_person_inr": 50,
     "duration_hours": 3,
-    "vibe_tags": ["nature", "relaxing", "swimming"],
+    "vibe_tags": [
+      "nature",
+      "relaxing",
+      "swimming"
+    ],
     "type": "Nature",
     "best_time": "Morning",
     "description": "A scenic waterfall cascading down from a height of 160 feet into a cool natural reservoir."
@@ -121,10 +157,13 @@
     "location": "Vaishali",
     "city": "Vaishali",
     "latitude": 25.987,
-    "longitude": 85.120,
+    "longitude": 85.12,
     "price_per_person_inr": 0,
     "duration_hours": 1,
-    "vibe_tags": ["history", "spiritual"],
+    "vibe_tags": [
+      "history",
+      "spiritual"
+    ],
     "type": "Sightseeing",
     "best_time": "Morning",
     "description": "See the remarkably preserved lion pillar erected by Emperor Ashoka near the ancient coronation tank."
@@ -133,11 +172,15 @@
     "name": "Takht Sri Patna Sahib",
     "location": "Patna City",
     "city": "Patna",
-    "latitude": 25.590,
+    "latitude": 25.59,
     "longitude": 85.228,
     "price_per_person_inr": 0,
     "duration_hours": 1.5,
-    "vibe_tags": ["spiritual", "culture", "peaceful"],
+    "vibe_tags": [
+      "spiritual",
+      "culture",
+      "peaceful"
+    ],
     "type": "Religious",
     "best_time": "Morning",
     "description": "Visit the holy Gurdwara built in remembrance of the birthplace of Guru Gobind Singh Ji."
@@ -150,7 +193,11 @@
     "longitude": 84.991,
     "price_per_person_inr": 0,
     "duration_hours": 1.5,
-    "vibe_tags": ["spiritual", "meditation", "relaxing"],
+    "vibe_tags": [
+      "spiritual",
+      "meditation",
+      "relaxing"
+    ],
     "type": "Activity",
     "best_time": "Early Morning",
     "description": "Sit and meditate quietly under the sacred descendant of the original Bodhi tree."
@@ -163,7 +210,11 @@
     "longitude": 85.441,
     "price_per_person_inr": 0,
     "duration_hours": 2.5,
-    "vibe_tags": ["trekking", "nature", "history"],
+    "vibe_tags": [
+      "trekking",
+      "nature",
+      "history"
+    ],
     "type": "Trek",
     "best_time": "Morning",
     "description": "Trek up the 'Vulture's Peak' where Lord Buddha preached many of his famous sermons."
@@ -176,7 +227,11 @@
     "longitude": 85.006,
     "price_per_person_inr": 100,
     "duration_hours": 2,
-    "vibe_tags": ["culture", "history", "walking"],
+    "vibe_tags": [
+      "culture",
+      "history",
+      "walking"
+    ],
     "type": "Walking Tour",
     "best_time": "Late Afternoon",
     "description": "Walk through rural Bodh Gaya to the ancient stupa dedicated to the milkmaid who fed Buddha."
@@ -185,13 +240,186 @@
     "name": "Authentic Bihari Thali Experience",
     "location": "Local Restaurant",
     "city": "Patna",
-    "latitude": 25.610,
-    "longitude": 85.140,
+    "latitude": 25.61,
+    "longitude": 85.14,
     "price_per_person_inr": 400,
     "duration_hours": 1.5,
-    "vibe_tags": ["food", "culture"],
+    "vibe_tags": [
+      "food",
+      "culture"
+    ],
     "type": "Dining",
     "best_time": "Lunch",
     "description": "Relish a traditional Bihari thali including Litti Chokha, Sattu Paratha, and local sweets."
+  },
+  {
+    "name": "Valmiki Tiger Reserve Safari",
+    "location": "Valmiki National Park",
+    "city": "West Champaran",
+    "latitude": 27.425,
+    "longitude": 83.925,
+    "price_per_person_inr": 1200,
+    "duration_hours": 4,
+    "vibe_tags": [
+      "wildlife",
+      "adventure",
+      "nature"
+    ],
+    "type": "Safari",
+    "best_time": "Early Morning",
+    "description": "Embark on a jeep safari in Bihar's only national park to spot tigers, leopards, and diverse bird species."
+  },
+  {
+    "name": "Shahi Litchi Farm Tour",
+    "location": "Orchards",
+    "city": "Muzaffarpur",
+    "latitude": 26.13,
+    "longitude": 85.395,
+    "price_per_person_inr": 300,
+    "duration_hours": 2,
+    "vibe_tags": [
+      "agritourism",
+      "food",
+      "relaxing"
+    ],
+    "type": "Tour",
+    "best_time": "Morning (May-June)",
+    "description": "Walk through lush litchi orchards, learn about the cultivation of the famous Shahi Litchi, and taste fresh fruit."
+  },
+  {
+    "name": "Vikramshila University Ruins Visit",
+    "location": "Antichak",
+    "city": "Bhagalpur",
+    "latitude": 25.318,
+    "longitude": 87.279,
+    "price_per_person_inr": 100,
+    "duration_hours": 3,
+    "vibe_tags": [
+      "history",
+      "education",
+      "architecture"
+    ],
+    "type": "Heritage Tour",
+    "best_time": "Morning",
+    "description": "Explore the ruins of Vikramshila, one of the two most important centers of Buddhist learning in ancient India."
+  },
+  {
+    "name": "Munger Fort & Bihar School of Yoga",
+    "location": "Munger Fort",
+    "city": "Munger",
+    "latitude": 25.378,
+    "longitude": 86.474,
+    "price_per_person_inr": 50,
+    "duration_hours": 4,
+    "vibe_tags": [
+      "history",
+      "spiritual",
+      "wellness"
+    ],
+    "type": "Sightseeing",
+    "best_time": "Morning",
+    "description": "Visit the historic Munger Fort on the Ganges and the world-renowned Bihar School of Yoga located within its premises."
+  },
+  {
+    "name": "Kaimur Wildlife Sanctuary Trek",
+    "location": "Kaimur Range",
+    "city": "Kaimur",
+    "latitude": 25.033,
+    "longitude": 83.616,
+    "price_per_person_inr": 200,
+    "duration_hours": 5,
+    "vibe_tags": [
+      "trekking",
+      "nature",
+      "wildlife"
+    ],
+    "type": "Trek",
+    "best_time": "Early Morning",
+    "description": "Trek through the dense forests and waterfalls of Bihar's largest wildlife sanctuary."
+  },
+  {
+    "name": "Darbhanga Palace Tour",
+    "location": "Raj Darbhanga",
+    "city": "Darbhanga",
+    "latitude": 26.154,
+    "longitude": 85.897,
+    "price_per_person_inr": 150,
+    "duration_hours": 2,
+    "vibe_tags": [
+      "culture",
+      "history",
+      "architecture"
+    ],
+    "type": "Heritage Tour",
+    "best_time": "Afternoon",
+    "description": "Marvel at the architectural brilliance of the palaces built by the Khandavala dynasty of Darbhanga."
+  },
+  {
+    "name": "Barabar Caves Exploration",
+    "location": "Makhdumpur",
+    "city": "Jehanabad",
+    "latitude": 25.005,
+    "longitude": 85.062,
+    "price_per_person_inr": 100,
+    "duration_hours": 3,
+    "vibe_tags": [
+      "history",
+      "architecture",
+      "mystery"
+    ],
+    "type": "Heritage Tour",
+    "best_time": "Morning",
+    "description": "Visit the oldest surviving rock-cut caves in India, dating back to the Mauryan Empire (322–185 BCE)."
+  },
+  {
+    "name": "Mandar Hill Climb",
+    "location": "Bounsi",
+    "city": "Banka",
+    "latitude": 24.81,
+    "longitude": 87.026,
+    "price_per_person_inr": 0,
+    "duration_hours": 4,
+    "vibe_tags": [
+      "trekking",
+      "mythology",
+      "scenic"
+    ],
+    "type": "Trek",
+    "best_time": "Early Morning",
+    "description": "Climb the granite hill believed to be the mythical Mt. Mandara used during the churning of the ocean (Samudra Manthan)."
+  },
+  {
+    "name": "Kanwar Lake Bird Watching",
+    "location": "Kanwar Taal",
+    "city": "Begusarai",
+    "latitude": 25.626,
+    "longitude": 86.138,
+    "price_per_person_inr": 50,
+    "duration_hours": 3,
+    "vibe_tags": [
+      "nature",
+      "wildlife",
+      "photography"
+    ],
+    "type": "Nature Tour",
+    "best_time": "Early Morning (Winter)",
+    "description": "Watch thousands of migratory birds at Asia's largest freshwater oxbow lake."
+  },
+  {
+    "name": "Kesaria Stupa Visit",
+    "location": "Kesaria",
+    "city": "East Champaran",
+    "latitude": 26.335,
+    "longitude": 84.877,
+    "price_per_person_inr": 0,
+    "duration_hours": 1.5,
+    "vibe_tags": [
+      "history",
+      "spiritual",
+      "architecture"
+    ],
+    "type": "Sightseeing",
+    "best_time": "Morning",
+    "description": "Visit the tallest and largest Buddhist stupa in the world, built by Emperor Ashoka."
   }
 ]
