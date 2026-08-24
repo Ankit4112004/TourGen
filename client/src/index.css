@@ -1185,7 +1185,7 @@ p {
   grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
   gap: clamp(40px, 8vw, 112px);
   align-items: start;
-  padding-bottom: clamp(430px, 50vh, 560px);
+  padding-bottom: 0;
 }
 
 .heritage-stage-wrap {
@@ -1401,7 +1401,7 @@ p {
 
   .heritage-layout {
     display: block;
-    padding-bottom: 220px;
+    padding-bottom: 24px;
   }
 
   .heritage-stage-wrap {
