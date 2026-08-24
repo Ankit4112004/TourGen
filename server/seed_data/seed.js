@@ -1,5 +1,5 @@
 /**
- * Database seed script for TravelGenie
+ * Database seed script for GoKerala
  * 
  * Usage: npm run seed
  * 

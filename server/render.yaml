@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: travelgenie-server
+    name: gokerala-server
     env: node
     buildCommand: npm install
     startCommand: npm start

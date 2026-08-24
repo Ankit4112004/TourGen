@@ -37,7 +37,7 @@ function App() {
               Kerala itinerary studio
             </p>
             <h1 className="text-5xl font-black leading-[1.02] tracking-normal md:text-7xl">
-              TravelGenie
+              GoKerala
             </h1>
             <p className="mt-5 max-w-lg text-lg leading-8 text-white/85">
               Backwaters, tea hills, beaches, spice forests, and heritage towns arranged into a calm Kerala route.

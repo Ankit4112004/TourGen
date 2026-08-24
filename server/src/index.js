@@ -9,9 +9,9 @@ app.use(cors(allowedOrigin ? { origin: allowedOrigin } : undefined));
 app.use(express.json());
 
 app.get('/health', (_req, res) => {
-  res.json({ ok: true, service: 'TravelGenie API' });
+  res.json({ ok: true, service: 'GoKerala API' });
 });
 
 app.use('/api', tripRoutes);
 
-app.listen(process.env.PORT || 3000, () => console.log('TravelGenie server running on port ' + (process.env.PORT || 3000)));
+app.listen(process.env.PORT || 3000, () => console.log('GoKerala server running on port ' + (process.env.PORT || 3000)));
