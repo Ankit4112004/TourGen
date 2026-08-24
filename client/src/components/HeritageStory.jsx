@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
+import BiharHeritageMap from './BiharHeritageMap';
+import BiharOutlineBackground from './BiharOutlineBackground';
 import bodhGaya from '../assets/heritage/bodh-gaya.jpg';
 import nalanda from '../assets/heritage/nalanda.jpg';
 import rajgir from '../assets/heritage/rajgir.jpg';
@@ -55,6 +57,7 @@ const scenes = [
 
 function HeritageStory() {
   const [activeId, setActiveId] = useState(scenes[0].id);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const beatRefs = useRef([]);
 
   useEffect(() => {
@@ -66,20 +69,63 @@ function HeritageStory() {
 
         if (visible?.target?.dataset?.sceneId) {
           setActiveId(visible.target.dataset.sceneId);
+          setScrollProgress(0);
         }
       },
-      { rootMargin: '-18% 0px -48% 0px', threshold: [0.1, 0.4, 0.7] },
+      { rootMargin: '-25% 0px -45% 0px', threshold: [0.12, 0.4, 0.7] },
     );
 
     beatRefs.current.forEach((beat) => beat && observer.observe(beat));
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    let frame = 0;
+    const updateProgress = () => {
+      frame = 0;
+      const beat = beatRefs.current.find((item) => item?.dataset.sceneId === activeId);
+      if (!beat || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        setScrollProgress(0);
+        return;
+      }
+
+      const rect = beat.getBoundingClientRect();
+      const start = window.innerHeight * 0.62;
+      const end = window.innerHeight * 0.17;
+      const progress = Math.max(0, Math.min(1, (start - rect.top) / (start - end)));
+      setScrollProgress(progress);
+    };
+    const handleScroll = () => {
+      if (!frame) frame = window.requestAnimationFrame(updateProgress);
+    };
+
+    updateProgress();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  }, [activeId]);
+
+  const selectScene = (sceneId) => {
+    setActiveId(sceneId);
+    setScrollProgress(0);
+    const beat = beatRefs.current.find((item) => item?.dataset.sceneId === sceneId);
+    beat?.scrollIntoView({
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+      block: 'center',
+    });
+  };
+
   const activeScene = scenes.find((scene) => scene.id === activeId) || scenes[0];
+  const activeScale = 1 + scrollProgress * 0.07;
 
   return (
     <section className="heritage-section" aria-labelledby="heritage-title">
-      <div className="page-container">
+      <BiharOutlineBackground />
+      <div className="page-container heritage-content">
         <div className="heritage-intro">
           <div>
             <p className="section-eyebrow">A slower route through Bihar</p>
@@ -94,7 +140,11 @@ function HeritageStory() {
           <div className="heritage-stage-wrap" aria-live="polite">
             <div className="heritage-stage">
               {scenes.map((scene) => (
-                <figure key={scene.id} className={`heritage-stage-frame ${activeId === scene.id ? 'is-active' : ''}`}>
+                <figure
+                  key={scene.id}
+                  className={`heritage-stage-frame ${activeId === scene.id ? 'is-active' : ''}`}
+                  style={activeId === scene.id ? { transform: `scale(${activeScale})` } : undefined}
+                >
                   <img src={scene.image} alt={activeId === scene.id ? scene.alt : ''} loading={scene.id === scenes[0].id ? 'eager' : 'lazy'} />
                   <div className="heritage-stage-shade" />
                   <figcaption>
@@ -111,10 +161,10 @@ function HeritageStory() {
           </div>
 
           <div className="heritage-beats">
-            {scenes.map((scene) => (
+            {scenes.map((scene, index) => (
               <article
                 key={scene.id}
-                ref={(element) => { beatRefs.current[scenes.indexOf(scene)] = element; }}
+                ref={(element) => { beatRefs.current[index] = element; }}
                 data-scene-id={scene.id}
                 className={`heritage-beat ${activeId === scene.id ? 'is-active' : ''}`}
               >
@@ -145,6 +195,8 @@ function HeritageStory() {
             <a href="https://commons.wikimedia.org/wiki/File:Kesariya_Stupa_-kesariya-_east_champaran-_Bihar.jpg" target="_blank" rel="noreferrer">Kesariya · Monukr01 · CC BY-SA 4.0</a>
           </div>
         </details>
+
+        <BiharHeritageMap activeId={activeId} onSelect={selectScene} />
       </div>
     </section>
   );
