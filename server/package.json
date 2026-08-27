@@ -7,7 +7,7 @@
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
     "seed": "node seed_data/seed.js",
-    "test": "node test/llmOutput.test.js"
+    "test": "node test/llmOutput.test.js && node test/localPlanner.test.js"
   },
   "keywords": [],
   "author": "",
