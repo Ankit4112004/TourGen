@@ -1,5 +1,6 @@
 const { z } = require('zod');
 const { Mistral } = require('@mistralai/mistralai');
+const { toBoundedText } = require('../utils/llmOutput');
 const mistral = new Mistral({ apiKey: process.env.MISTRAL_API_KEY });
 
 const StayOutputSchema = z.object({
@@ -38,7 +39,7 @@ TASK: Select the SINGLE best stay for this trip. Consider:
 3. Location as a base for exploring Bihar
 4. Amenities that match traveler type
 
-Return JSON with: selected_stay_id (number), stay_name (string), stay_city (string), stay_latitude (number), stay_longitude (number), price_per_night (number), reasoning (string), why_this_fits (string)`;
+Return JSON with: selected_stay_id (number), stay_name (string), stay_city (string), stay_latitude (number), stay_longitude (number), price_per_night (number), reasoning (string, maximum 200 characters), why_this_fits (string, maximum 150 characters). Keep both explanations concise.`;
 
   const response = await mistral.chat.complete({
     model: 'mistral-large-latest',
@@ -52,12 +53,9 @@ Return JSON with: selected_stay_id (number), stay_name (string), stay_city (stri
   const parsed = JSON.parse(response.choices[0].message.content);
   
   // Mistral sometimes returns { reasoning: { something: "..." } } instead of a string
-  if (typeof parsed.reasoning === 'object' && parsed.reasoning !== null) {
-    parsed.reasoning = JSON.stringify(parsed.reasoning);
-  }
-  if (typeof parsed.why_this_fits === 'object' && parsed.why_this_fits !== null) {
-    parsed.why_this_fits = JSON.stringify(parsed.why_this_fits);
-  }
+  // Keep the API contract stable even when the model returns verbose or nested explanations.
+  parsed.reasoning = toBoundedText(parsed.reasoning, 200);
+  parsed.why_this_fits = toBoundedText(parsed.why_this_fits, 150);
 
   return StayOutputSchema.parse(parsed);
 }

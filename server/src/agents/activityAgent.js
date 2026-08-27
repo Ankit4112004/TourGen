@@ -1,5 +1,6 @@
 const { z } = require('zod');
 const { Mistral } = require('@mistralai/mistralai');
+const { toBoundedText } = require('../utils/llmOutput');
 const mistral = new Mistral({ apiKey: process.env.MISTRAL_API_KEY });
 
 const ActivityOutputSchema = z.object({
@@ -41,7 +42,7 @@ TASK: Plan exactly ${numDays} days of activities (1-2 activities per day). Consi
 4. Budget per person
 5. Don't repeat similar activities on consecutive days
 
-Return JSON with daily_activities array. Each activity must have: day (number), activity_id (number), activity_name (string), activity_city (string), activity_latitude (number), activity_longitude (number), time_slot (string), duration_hours (number), price_per_person (number), reasoning (string).`;
+Return JSON with daily_activities array. Each activity must have: day (number), activity_id (number), activity_name (string), activity_city (string), activity_latitude (number), activity_longitude (number), time_slot (string), duration_hours (number), price_per_person (number), reasoning (string, maximum 150 characters). Keep reasoning concise.`;
 
   const response = await mistral.chat.complete({
     model: 'mistral-large-latest',
@@ -56,9 +57,7 @@ Return JSON with daily_activities array. Each activity must have: day (number), 
   
   if (parsed.daily_activities && Array.isArray(parsed.daily_activities)) {
     parsed.daily_activities = parsed.daily_activities.map(act => {
-      if (typeof act.reasoning === 'object' && act.reasoning !== null) {
-        act.reasoning = JSON.stringify(act.reasoning);
-      }
+      act.reasoning = toBoundedText(act.reasoning, 150);
       return act;
     });
   }
