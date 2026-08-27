@@ -4,7 +4,7 @@ const { buildWorkflow } = require('../graph/workflow');
 const { buildLocalItinerary } = require('../planners/localPlanner');
 const redis = require('../cache/redis');
 
-// Render’s request timeout is about 30 seconds; leave enough time to return the fallback response.
+
 const AI_WORKFLOW_TIMEOUT_MS = Number(process.env.AI_WORKFLOW_TIMEOUT_MS) || 15000;
 const REDIS_TIMEOUT_MS = Number(process.env.REDIS_TIMEOUT_MS) || 2000;
 

@@ -52,8 +52,6 @@ Return JSON with: selected_stay_id (number), stay_name (string), stay_city (stri
 
   const parsed = JSON.parse(response.choices[0].message.content);
   
-  // Mistral sometimes returns { reasoning: { something: "..." } } instead of a string
-  // Keep the API contract stable even when the model returns verbose or nested explanations.
   parsed.reasoning = toBoundedText(parsed.reasoning, 200);
   parsed.why_this_fits = toBoundedText(parsed.why_this_fits, 150);
 
